@@ -17,25 +17,26 @@
 </head>
 <body>
 <div class="page-wrapper align-center">
-    <div class="container tag-selection">
-        <div class="row full-width">
-            <div class="column justify-center shrink listing-tag">
-                <span>Frontend</span>
+    <!-- active filters -->
+    <div class="container justify-center tag-selection">
+        <div class="row align-center no-padding">
+            <div class="column filter-col">
+                <div class="row no-padding filter-options-row"></div>
             </div>
-            <div class="column justify-center shrink listing-tag">
-                <span>Backend</span>
-            </div>
-            <div class="column justify-center shrink listing-tag">
-                <span>Fullstack</span>
+            <div class="column shrink">
+                <input type="button" value="Clear" id="clear">
             </div>
         </div>
     </div>
 
+    <!-- header banner -->
     <header class="container"></header>
 
+    <!-- listings -->
     <section class="container grow listing-container"></section>
 </div>
 
+<!-- citation -->
 <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://www.frontendmentor.io/profile/HunterG7" target="_blank">Hunter</a>.

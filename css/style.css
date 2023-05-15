@@ -34,8 +34,12 @@ header.container {
     font-size: 14px;
     margin-right: 5px;
 }
+.job-position:hover {
+    color: var(--desaturated-dark-cyan);
+}
 .job-position {
     font-size: 18px;
+    cursor: pointer;
 }
 .time-since-listing, .part-or-full, .job-location {
     font-size: 14px;
@@ -47,6 +51,7 @@ header.container {
     font-size: 12px;
     padding: 3px 6px;
     text-transform: uppercase;
+    font-weight: 700;
 }
 .new-tag {
     background-color: var(--desaturated-dark-cyan);
@@ -60,7 +65,7 @@ header.container {
 .listing-info {
     gap: 5px;
 }
-.listing-tag {
+.listing-tag, .filter-option {
     border-radius: 5px;
     background-color: var(--light-grayish-cyan);
     color: var(--desaturated-dark-cyan);
@@ -69,16 +74,76 @@ header.container {
     font-weight: 700;
     cursor: pointer;
 }
+.listing-tag:hover, .filter-option:hover {
+    background-color: var(--desaturated-dark-cyan);
+    color: var(--light-grayish-cyan);
+}
+
 .listing.featured {
     border-left: 5px solid var(--desaturated-dark-cyan);
 }
 .tag-selection {
     position: absolute;
-    border: 2px solid chartreuse;
-    top: 8vh;
-    width: 80vw;
+    top: 7vh;
+    display: none;
+}
+
+.filter-options-row {
+    overflow: scroll;
+    gap: 45px;
+}
+.filter-options-row .filter-option:hover {
+    background-color: var(--light-grayish-cyan);
+    color: var(--desaturated-dark-cyan);
+}
+.filter-options-row .filter-option {
+    cursor: unset;
+}
+.close:hover {
+    background-color: var(--very-dark-grayish-cyan);
+    color: var(--light-grayish-cyan);
+}
+.filter-col {
+    overflow: hidden;
+}
+.filter-option {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+}
+.close {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 100%;
+    background-color: var(--desaturated-dark-cyan);
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    right: -30px;
+    top: 0;
+    cursor: pointer;
+}
+#clear {
+    background-color: unset;
+    color: var(--desaturated-dark-cyan);
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+#clear:hover {
+    text-decoration: underline;
 }
 
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

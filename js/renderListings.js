@@ -1,6 +1,5 @@
 export const listingsParent = document.querySelector('.listing-container');
 
-
 export const fetchData = async () => {
 	try {
 		const response = await fetch('data/data.json');
@@ -135,7 +134,6 @@ export const renderListing = (listing) => {
 
 export const renderAllListings = async () => {
 	let listings = (await fetchData()).listings;
-	console.log(listings);
 
 	listings.forEach((listing)=>{
 		renderListing(listing);
